@@ -248,7 +248,7 @@ a {
 }
 
 .dropdown-toggle {
-  background: #000000;
+  background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 0.6rem 1.5rem;
@@ -389,19 +389,13 @@ a {
   display: inline-block;
   margin-bottom: 0.5rem;
   transition: all 0.2s ease;
-  position: relative;
-  padding-left: 30px;
+  
+  
 }
 
 .product-category:before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: "bootstrap-icons";
-  font-size: 1rem;
-  color: #333;
+  content: none !important;
+  display: none !important;
 }
 
 .product-category[data-category="Minimal"]:before { content: "\f5a8"; }
@@ -531,6 +525,7 @@ a {
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s;
+  z-index: 1000 !important;
 }
 
 .close-modal:hover {
@@ -549,7 +544,8 @@ a {
   box-shadow: -12px 0 30px rgba(0,0,0,0.2);
   transform: translateX(100%);
   transition: transform 0.3s ease;
-  z-index: 60;
+  z-index: 1000 !important; 
+  
   display: flex;
   flex-direction: column;
 }
@@ -610,7 +606,7 @@ a {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
-  z-index: 55;
+  z-index: 999 !important; 
 }
 
 .cart-overlay.is-active {
@@ -765,4 +761,49 @@ a {
   .badge-tag { font-size: 0.7rem; padding: 5px 12px; top: 8px; left: 8px; }
   .modal-image img { height: 300px; }
   .product-grid { grid-template-columns: 1fr; }
+}
+/* เพิ่มต่อท้ายใน style.css */
+
+/* Animation Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ปรับแต่ง Chip Group */
+.chip-group {
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.chip {
+  background: transparent;
+  color: #666;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.chip:hover {
+  color: #000;
+  background: rgba(0,0,0,0.05);
+}
+
+.chip.is-active {
+  background: #222; /* หรือสี var(--primary) */
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Skeleton Card ปรับให้เนียนขึ้น */
+.skeleton-card {
+  pointer-events: none;
+}
+
+.btn-outline-dark:hover {
+    background-color: #222;
+    color: #fff;
+    transform: translateY(-1px);
 }
