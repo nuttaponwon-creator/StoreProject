@@ -28,9 +28,13 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
-  border-bottom: 1px solid #e0e0e0;
-  backdrop-filter: blur(10px);
+  
+ 
+  background: rgba(255, 255, 255, 0.7); 
+  
+  
+  border-bottom: 1px solid rgba(0,0,0,0.05); 
+  backdrop-filter: blur(10px); 
 }
 
 .nav-inner {
@@ -436,6 +440,7 @@ a {
   padding: 20px;
 }
 
+
 .modal-content {
   background: #fff;
   border-radius: 20px;
@@ -445,6 +450,8 @@ a {
   overflow-y: auto;
   box-shadow: 0 25px 50px rgba(0,0,0,0.3);
   animation: modalShow 0.4s ease-out;
+  
+  position: relative; 
 }
 
 @keyframes modalShow {
