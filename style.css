@@ -1,11 +1,20 @@
 *, *::before, *::after { box-sizing: border-box; }
-
+main {
+  flex: 1;
+  /* ดันให้ main ขยายเต็มที่ */
+}
 body {
-  margin: 0;
+  
   font-family: 'Kanit', system-ui, sans-serif;
   background-color: #fcfaf7;
   color: #222;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* ความสูงขั้นต่ำเต็มจอ */
 }
 
 
@@ -31,11 +40,27 @@ a {
   z-index: 100;
   
  
-  background: rgba(255, 255, 255, 0.7); 
+  background: rgb(250, 250, 250); 
   
   
   border-bottom: 1px solid rgba(0,0,0,0.05); 
   backdrop-filter: blur(10px); 
+  transition: background-color 0.6s ease, backdrop-filter 0.6s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-links a {
+  display: inline-block;               /* เพื่อให้ transform ทำงานกับ text */
+  transition: transform 0.25s ease, 
+              color 0.25s ease;        /* ลื่นขึ้น + เปลี่ยนสีถ้าต้องการ */
+}
+
+.nav-links a:hover {
+  transform: translateY(-3px);         /* ขยับขึ้น 3px */
+  color: var(--primary);               /* เปลี่ยนสีเมื่อ hover (ถ้าอยากได้) */
 }
 
 .nav-inner {
@@ -644,22 +669,36 @@ a {
   color: #fff;
 }
 
-.footer {
-  background: #111;
-  color: #eee;
-  padding: 1.2rem 0;
-  font-size: 0.85rem;
+.footer-social {
+    color: white;
+    font-size: 2rem;
+    margin-right: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.5rem;
+.footer-social:hover {
+    color: var(--primary);
+    transform: translateY(-4px);
 }
 
-.footer-note {
-  opacity: 0.8;
+.footer-links a {
+    color: #dcdcdc;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+    transform: translateX(3px);
+}
+
+.footer-contact li {
+    margin-bottom: 5px;
+    color: #bfbfbf;
+}
+
+.footer h5 {
+    color: #cccccc;
 }
 
 .two-col {
@@ -810,3 +849,30 @@ a {
     color: #fff;
     transform: translateY(-1px);
 }
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  background: var(--primary);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;                 /* เริ่มโปร่งใส */
+  pointer-events: none;       /* ปิดการคลิกตอนซ่อน */
+  transition: opacity 0.4s ease, transform 0.3s ease; /* เพิ่มเอฟเฟกต์ค่อยๆโผล่ */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+#btn-back-to-top:hover {
+  transform: scale(1.12);  
+}
+#btn-back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;       /* เปิดการคลิก */
+}
+

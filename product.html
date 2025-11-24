@@ -56,30 +56,30 @@
 <body>
   <header class="navbar">
     <div class="container nav-inner">
-        <a href="index.html" class="logo d-flex align-items-center text-decoration-none" style="color: inherit;">
-            <img src="Logo SPU SIT/Logo SPU SIT_Color.png" alt="Unilook Logo" style="height: 40px; margin-right: 8px;">
+      <a href="index.html" class="logo d-flex align-items-center text-decoration-none" style="color: inherit;">
+        <img src="Logo SPU SIT/Logo SPU SIT_Color.png" alt="Unilook Logo" style="height: 40px; margin-right: 8px;">
 
-            <img src="Logo SPU SIT/unilooklogo.png" alt="Unilook Icon" style="height: 60px;">
-        </a>
-        
-       <nav class="nav-links" id="main-nav">
-    <a href="index.html#home">หน้าแรก</a>
-    
-    <a href="product.html">สินค้า</a>
-    
-    <a href="index.html#about">เกี่ยวกับเรา</a>
-    
-    <a href="index.html#contact">ติดต่อ</a>
-</nav>
-        <div class="nav-actions">
-            <input type="text" class="search-input" id="search-input" placeholder="ค้นหาสินค้า..." />
-            <button class="icon-btn" id="cart-toggle">
-                ตะกร้า (<span id="cart-count">0</span>)
-            </button>
-        </div>
-        <button class="menu-toggle" id="menu-toggle" aria-label="เปิดเมนู">☰</button>
+        <img src="Logo SPU SIT/unilooklogo.png" alt="Unilook Icon" style="height: 60px;">
+      </a>
+
+      <nav class="nav-links" id="main-nav">
+        <a href="index.html#home">หน้าแรก</a>
+
+        <a href="product.html">สินค้า</a>
+
+        <a href="index.html#about">เกี่ยวกับเรา</a>
+
+        <a href="index.html#contact">ติดต่อ</a>
+      </nav>
+      <div class="nav-actions">
+        <input type="text" class="search-input" id="search-input" placeholder="ค้นหาสินค้า..." />
+        <button class="icon-btn" id="cart-toggle">
+          ตะกร้า (<span id="cart-count">0</span>)
+        </button>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="เปิดเมนู">☰</button>
     </div>
-</header>
+  </header>
   <main>
     <section id="products" class="section">
       <div class="container">
@@ -128,78 +128,126 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p>© 2025 ชื่อร้าน FASHION. All rights reserved.</p>
-        <p class="footer-note">*เงื่อนไขส่วนลดเป็นไปตามที่ร้านกำหนด</p>
-      </div>
-    </footer>
-    <aside class="cart-panel" id="cart-panel" aria-hidden="true">
-      <div class="cart-header">
-        <h2>ตะกร้าสินค้า</h2>
-        <button class="icon-btn" id="cart-close">✕</button>
-      </div>
-      <div class="cart-body">
-        <ul class="cart-items" id="cart-items">
-          <li class="cart-empty">ยังไม่มีสินค้าในตะกร้า</li>
-        </ul>
-      </div>
-      <div class="cart-footer">
-        <div class="cart-total-row">
-          <span>ยอดรวม</span>
-          <span id="cart-total">฿0</span>
+  </main>
+  <footer class="footer text-light mt-5 py-4" style="background-color: rgb(15, 15, 15);">
+    <div class="container">
+      <div class="row text-center text-md-start">
+
+        <!-- Social Media -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">โซเชียลมีเดีย</h5>
+          <a href="https://www.facebook.com/" target="_blank" class="footer-social">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="footer-social">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://line.me" target="_blank" class="footer-social">
+            <i class="bi bi-line"></i>
+          </a>
         </div>
-        <button class="btn-primary btn-full">ไปหน้าเช็คเอาต์</button>
+
+        <!-- Contact -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">ติดต่อเรา</h5>
+          <ul class="list-unstyled footer-contact">
+            <li>LINE: @Unilook-fashion</li>
+            <li>Instagram: @Unilook.fashion.store</li>
+            <li>โทร: 08x-xxx-xxxx</li>
+          </ul>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold mb-3">เมนู</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="product.html">สินค้า</a></li>
+            <li><a href="#about">เกี่ยวกับเรา</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+          </ul>
+        </div>
+
       </div>
-    </aside>
-    <div class="cart-overlay" id="cart-overlay"></div>
-    <!-- Product Popup Modal -->
-    <div id="productModal" class="modal">
-      <div class="modal-content">
 
-        <!-- ปุ่มปิด -->
-        <span class="close-modal" id="modal-close">&times;</span>
+      <hr class="border-secondary">
 
-        <div class="modal-body">
+      <div class="text-center mt-3">
+        <p class="mb-0">© 2025 Unilook FASHION. All rights reserved.</p>
+        <p class="footer-note mb-0">*เงื่อนไขส่วนลดเป็นไปตามที่ร้านกำหนด</p>
+      </div>
+    </div>
+  </footer>
+  <aside class="cart-panel" id="cart-panel" aria-hidden="true">
+    <div class="cart-header">
+      <h2>ตะกร้าสินค้า</h2>
+      <button class="icon-btn" id="cart-close">✕</button>
+    </div>
+    <div class="cart-body">
+      <ul class="cart-items" id="cart-items">
+        <li class="cart-empty">ยังไม่มีสินค้าในตะกร้า</li>
+      </ul>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>ยอดรวม</span>
+        <span id="cart-total">฿0</span>
+      </div>
+      <button class="btn-primary btn-full">ไปหน้าเช็คเอาต์</button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <!-- Product Popup Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
 
-          <!-- รูปสินค้า -->
-          <div class="modal-image">
-            <img id="modal-img" src="" alt="product">
+      <!-- ปุ่มปิด -->
+      <span class="close-modal" id="modal-close">&times;</span>
+
+      <div class="modal-body">
+
+        <!-- รูปสินค้า -->
+        <div class="modal-image">
+          <img id="modal-img" src="" alt="product">
+        </div>
+
+        <!-- ข้อมูลสินค้า -->
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <span class="text-muted">หมวด: </span><span class="text-muted" id="modal-category"></span>
+          <h6 class="pt-4">รายละเอียด</h6>
+          <p id="modal-description"></p>
+
+          <div class="mb-3">
+            <label for="modal-size-select" class="fw-bold">ไซส์:</label>
+            <select id="modal-size-select" class="form-select mt-1" style="max-width: 150px; border-radius: 8px;">
+            </select>
           </div>
 
-          <!-- ข้อมูลสินค้า -->
-          <div class="modal-info">
-            <h2 id="modal-title"></h2>
-            <span class="text-muted">หมวด: </span><span class="text-muted" id="modal-category"></span>
-            <h6 class="pt-4">รายละเอียด</h6>
-            <p id="modal-description"></p>
-
-            <div class="mb-3">
-              <label for="modal-size-select" class="fw-bold">ไซส์:</label>
-              <select id="modal-size-select" class="form-select mt-1" style="max-width: 150px; border-radius: 8px;">
-              </select>
-            </div>
-
-            <label>จำนวน *</label>
-            <div class="qty-box">
-              <button id="qty-decrease">-</button>
-              <input id="qty-input" type="text" value="1">
-              <button id="qty-increase">+</button>
-            </div>
-            <h3 id="modal-price"></h3>
-            <!-- ปุ่มใน popup ต้องใช้ id แยกออกจากปุ่มสินค้า -->
-            <button id="modal-addcart" class="btn-primary btn-full " data-name="" data-price="" data-sizes="">
-              เพิ่มลงตะกร้า
-            </button>
-
-
+          <label>จำนวน *</label>
+          <div class="qty-box">
+            <button id="qty-decrease">-</button>
+            <input id="qty-input" type="text" value="1">
+            <button id="qty-increase">+</button>
           </div>
+          <h3 id="modal-price"></h3>
+          <!-- ปุ่มใน popup ต้องใช้ id แยกออกจากปุ่มสินค้า -->
+          <button id="modal-addcart" class="btn-primary btn-full " data-name="" data-price="" data-sizes="">
+            เพิ่มลงตะกร้า
+          </button>
+
+
         </div>
       </div>
     </div>
-    <script src="js/products.js"></script>
-    <script src="js/renderProducts.js"></script>
-    <script src="js/script.js"></script>
+  </div>
+  <button id="btn-back-to-top" title="กลับขึ้นด้านบน">
+    ↑
+  </button>
+
+  <script src="js/products.js"></script>
+  <script src="js/renderProducts.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
