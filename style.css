@@ -876,3 +876,131 @@ a {
   pointer-events: auto;       /* เปิดการคลิก */
 }
 
+
+/* --- About  --- */
+
+.section-about {
+  background-color: #fff;
+  overflow: hidden; /* ป้องกันภาพล้น */
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* การจัดวางรูปภาพซ้อนกัน */
+.about-image-wrapper {
+  position: relative;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
+}
+
+.about-img-main {
+  width: 85%;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.about-img-small {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  border: 8px solid #fff; /* ขอบขาวตัดกับรูปใหญ่ */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  z-index: 3;
+  transition: transform 0.5s ease;
+}
+
+/* กรอบตกแต่งด้านหลัง */
+.about-deco-box {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 60%;
+  height: 60%;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* Effect เมื่อเอาเมาส์ชี้ที่กลุ่มรูปภาพ */
+.about-image-wrapper:hover .about-img-main {
+  transform: translateY(-5px);
+}
+.about-image-wrapper:hover .about-img-small {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Features List แบบใหม่ */
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: #fcf6ec; /* สีพื้นหลังอ่อนๆ ของธีมร้าน */
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .icon-box {
+  background: var(--primary);
+  color: #fff;
+  transform: rotate(10deg);
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .reverse-mobile {
+    flex-direction: column-reverse; /* บนมือถือเอาข้อความขึ้นก่อนรูป */
+  }
+  
+  .about-image-wrapper {
+    margin-top: 3rem;
+    padding-right: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  
+  .about-img-main {
+    width: 100%;
+  }
+  
+  .about-img-small {
+    width: 45%;
+    bottom: -10%;
+    right: -2%;
+  }
+}
